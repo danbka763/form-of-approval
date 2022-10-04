@@ -1,0 +1,18 @@
+.main__open-modal {
+  background-color: #47adb6;
+  border: none;
+  /* border: 1.5px solid #47adb6; */
+  border-radius: 3px;
+  padding: 7px 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000040;
+}

@@ -1,0 +1,7 @@
+fieldset {
+  margin: 0;
+}
+legend {
+  position: relative;
+  bottom: 3px
+}
