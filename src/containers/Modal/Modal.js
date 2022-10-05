@@ -12,7 +12,7 @@ const Modal = (props) => {
   const tableData = [
     {parameter: "Qж", approval: null, last: 30, diff: null},
     {parameter: "% воды", approval: null, last: 61, diff: null},
-    {parameter: "Qн", approval: null, last: 24.5700, diff: null},
+    {parameter: "Qн", approval: null, last: 24.5700, diff: null, disabled: true},
     {parameter: "Hд", approval: null, last: null, diff: null},
     {parameter: "Pлин", approval: null, last: null, diff: null},
     {parameter: "Pбуф", approval: null, last: null, diff: null},
@@ -49,8 +49,8 @@ const Modal = (props) => {
             {tableData.map((line, i) => (
               <tr key={i} style={{backgroundColor: i % 2 ? "#f5f5f5" : "#fff"}}>
                 <td>{line.parameter}</td>
-                <td><input type="number" value={line.approval}/></td>
-                <td>{line.last}</td>
+                <td><input type="number" value={line.approval} disabled={line.disabled}/></td>
+                <td>{i === 2 ? line.last.toFixed(4) : line.last}</td>
                 <td>{line.diff}</td>
               </tr>
             ))}
