@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+## Задача на собеседование в компанию
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Задача
+- Разработать форму согласования изменений по заданному рисунку
 
-## Available Scripts
+## Реализация
+Веб-приложение написано на React. В приложении имитируется передача post и get запросов с сервером на .NET Core. 
+Для запуска проекта - в консоли, находясь в корне проекта, написать:  
+- ``` npm install ``` 
+- ``` npm start ``` 
 
-In the project directory, you can run:
+## Реализованы следующие функции
+- При запуске пользователю показывается лист с месторождениями. При клике на кнопку - иммитируется запрос на бек и получение необходимых данных, открывается модальное окно с формой для заполнения данных.
+- При открытии модального окна - активные элементы заблокированы, снизу появляется оповещение о том, что данные подгружаются.
+- Есть возможность раскрыть окно на весь экран браузера.
+- Для хранения данных используется Context, из которого мы так-же кидаем Get запросы.
+- Для имитации задержки при передачи данных - добавлены setTimeOut-ы.
+- Заполнение некоторых ячеек происходит автоматически, изходя из того, какие данные ввёл пользователь. К примеру - Qн заполняется по формуле Qн = Qж * (1 - %в / 100) в случае, если пользователь внёс данные в строки Qж и %в.
+- Если пользователь нажмёт на кнопку отправки данных, забыв внести обязательные данные - приложение оповестит его предупреждением на форме.
+- После отправки - все активные элементы на форме блокируются, появляется сообщение о статусе отправки. Обязательные данные Qж и %в в случайном порядке подсвечиваются красным или зелёным, а при наведении на них отображается «Отклонено» или «Согласовано» соответственно.
+- Все отправленные данные сохраняются до перезагрузки страницы.
 
-### `npm start`
+## Затраченное время на выполнение задания
+По таймтрекеру, на выполнение задачи было затрачено 11 часов 57 минут суммарно.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Скриншот из таймтрекера](https://downloader.disk.yandex.ru/preview/15cc72d1b15b4b6a9ae5432a40953dd0a93c733e5dff260d2ffa72183574a784/633e4492/TUU-CvWnXRlgYMiyq5s3YdhBUC3uJyUfVGy_jk1DdKpCehEP2xzQPFie6X5lpcQyCKolZV156M75agJpvNeF9Q%3D%3D?uid=0&filename=2022-10-06_05-59-07.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v2&size=2048x2048)

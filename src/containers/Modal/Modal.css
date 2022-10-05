@@ -2,20 +2,24 @@
   background-color: white;
   overflow: hidden;
   position: absolute;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scrollbar-width: 0;
 }
 .form-big {
   width: 100%;
   height: 100%;
 }
 .form-small {
-  width: 40rem;
+  width: 35rem;
   max-width: 100vw;
+  max-height: 100vh;
   border-radius: 5px;
 }
 
 
 main {
-  margin: 0.5rem;
+  margin: 2.5rem 0.5rem 0.5rem;
 }
 
 .custom-select select {
@@ -23,6 +27,7 @@ main {
   background-color: white;
   border-radius: 3px;
   border: 1px solid rgb(139, 139, 139);
+  padding: 3px;
   padding-right: 25px;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -44,6 +49,7 @@ main {
   top: 0.18rem;
   z-index: 1;
   text-align: center;
+  color: rgb(139, 139, 139);
   width: 1rem;
   height: 100%;
   pointer-events: none;
@@ -80,8 +86,14 @@ table th {
 table td input[type=number] {
   border: 0;
   background-color: #ffffff00;
+  color: #000;
   -moz-appearance: textfield;
   outline: none;
+}
+
+table td p {
+  margin: 0;
+  cursor: default;
 }
 
 table td input::-webkit-outer-spin-button,
@@ -91,7 +103,7 @@ table td input::-webkit-inner-spin-button {
 }
 
 
-footer {
+#form footer {
   margin: 0 0.5rem 0.5rem;
   background-color: #eff8f9;
   padding: 0.5rem;
@@ -100,17 +112,50 @@ footer {
   align-items: center;
 }
 
-footer button {
+#form footer button {
   background-color: #fff;
   border: 1.5px solid rgb(139, 139, 139);
   border-radius: 3px;
-  padding: 3px 5px;
+  padding: 3px 0;
+  display: flex;
+  justify-content: center;
+  min-width: 7rem;
   color: #000;
   cursor: pointer;
 }
 
 footer p {
+  margin-right: 1rem;
   margin: 0;
   font-size: 0.9rem;
   color: rgb(139, 48, 48);
+}
+
+.form__accept-parameter {
+  color: green;
+}
+
+.form__reject-parameter {
+  color: rgb(139, 48, 48);
+}
+
+
+.custom-select select.form__disabled,
+#form .form__disabled,
+#form footer button.form__disabled {
+  border: 1px solid rgba(139, 139, 139, 0.2);
+  color: rgba(139, 139, 139, 0.5);
+  cursor: default;
+}
+
+#form input.form__disabled {
+  cursor: default;
+  border: 0;
+  color: #000;
+}
+
+@media (max-width: 450px) {
+  main {
+    padding-top: .5rem;
+  }
 }

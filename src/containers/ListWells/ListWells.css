@@ -1,0 +1,47 @@
+.main__list-wells {
+  min-width: 30rem;
+  max-width: 100%;
+  padding: 1rem 1rem 0;
+}
+
+.main__wells {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__well {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem;
+  border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.main__well label {
+  width: 100%;
+  display: grid;
+  margin-right: 1rem;
+  grid-template-columns: 1.75rem 1.5rem auto;
+}
+
+.main__open-modal {
+  background-color: #47adb6;
+  border: none;
+  /* border: 1.5px solid #47adb6; */
+  border-radius: 3px;
+  padding: 7px 0;
+  display: flex;
+  justify-content: center;
+  min-width: 7.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 490px) {
+  .main__list-wells {
+    min-width: auto;
+    width: 100%;
+  }
+}

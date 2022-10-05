@@ -5,12 +5,24 @@ header {
   font-size: 0.9rem;
   font-weight: 600;
   padding: 0.5rem 0;
+  position: fixed;
+  z-index: 2;
 }
 header>div {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 0.5rem;
+}
+
+.form-small header {
+  width: 35rem;
+  max-width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+#form::-webkit-scrollbar {
+  width: 0px;
 }
 
 header p {
@@ -25,4 +37,10 @@ header p {
 .form__button  {
   margin-left: 0.5rem;
   cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  header {
+    font-size: 0.75rem;
+  }
 }
