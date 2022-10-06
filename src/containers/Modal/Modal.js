@@ -144,7 +144,7 @@ const Modal = (props) => {
         <label>
           {forms.id} {!!forms.id && "/"} {forms.name}
         </label>
-        <FFieldset title={"Причина отконения"}>
+        <FFieldset title={"Причина отклонения"}>
           <div className="custom-select">
             <select
               disabled={loading}
