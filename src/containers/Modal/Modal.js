@@ -92,8 +92,8 @@ const Modal = (props) => {
 
   const validation =
     idSelect !== null &&
-    tableData[0].approval !== null &&
-    tableData[1].approval !== null;
+    String(tableData[0].approval).length &&
+    String(tableData[1].approval).length;
 
   const submit = async () => {
     const responce = await postApproval({
